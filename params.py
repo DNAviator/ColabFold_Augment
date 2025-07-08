@@ -1,4 +1,4 @@
-class params:
+class Params:
     def __init__(self) -> None:
 
         # Input options
