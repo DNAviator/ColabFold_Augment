@@ -1,6 +1,6 @@
 class params:
     def __init__(self) -> None:
-        
+
         # Input options
         self.sequence = None
         self.jobname = None
@@ -68,3 +68,6 @@ class params:
         # Post analysis (optional)
         self.post_analysis = "animate_all_results"  #  ["none", "display_top5_results", "animate_all_results", "coevolution"]
         self.post_analysis_dpi = 100  #  ["100", "200"] {type:"raw"}
+
+    def items(self):
+        return {key: value for key, value in self.__dict__.items()}
