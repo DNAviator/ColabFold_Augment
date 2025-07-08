@@ -1,9 +1,12 @@
+import os
+
 class Params:
     def __init__(self) -> None:
 
         # Input options
-        self.sequence = None
-        self.jobname = None
+        
+        self.sequence = "None"
+        self.jobname = os.path.basename(self.sequence)
         self.copies = 1
 
         # MSA options
