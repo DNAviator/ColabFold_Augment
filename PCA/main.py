@@ -308,5 +308,5 @@ if __name__ == "__main__":
         viz_params=VISUALIZATION_PARAMS,
     )
     time_function(pca_visualizer.run_clustering)
-    time_function(pca_visualizer.generate_plots)
-    # time_function(pca_visualizer.generate_animation)
+    # time_function(pca_visualizer.generate_plots)
+    time_function(pca_visualizer.generate_animation)

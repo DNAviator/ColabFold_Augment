@@ -3,3 +3,4 @@ SPEACH_AF/
 colabfold/
 __pycache__/
 *.pyc
+PCA/__pycache__/
