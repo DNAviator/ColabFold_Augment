@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../../OneDrive - Vanderbilt/Documents/AF2_result"
+		}
+	],
+	"settings": {
+		"python.envFile": "C:\\Users\\cramerj\\AppData\\Local\\anaconda3\\envs\\ColabFold",
+		"python.terminal.activateEnvironment": true
+	}
+}
