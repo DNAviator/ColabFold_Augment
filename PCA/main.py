@@ -36,11 +36,13 @@ if __name__ == "__main__":
                 "Nanorana_parkeri_w_dropout",
                 # "All_Wood_Frog",
                 "Wood_Frog_w_dropout_all",
+                "Human_w_dropout",
+                "Mus_Musculus_w_dropout",
             ]
         ],
-        msa_path="C:\\Users\\cramerj\\Code\\ColabFold_Augmentation\\ColabFold_Augment\\PCA\\200_seq_alignment_no_speech_AF.aln-clustal_num",
+        msa_path="C:\\Users\\cramerj\\Code\\ColabFold_Augmentation\\ColabFold_Augment\\PCA\\Full_Align_Added_Human_Mouse.clustal_num",
         output_dir="C:\\Users\\cramerj\\Code\\ColabFold_Augmentation\\ColabFold_Augment\\PCA\\PCA_output",
-        run_name="Multi_No_SPAF_No_Loops_02",
+        run_name="All_Dropout_Jul_24_01",
     )
 
     ALIGNMENT_PARAMS = AlignmentParams(
@@ -200,8 +202,8 @@ if __name__ == "__main__":
     )
 
     VISUALIZATION_PARAMS = VisualizationParams(
-        pcs_to_plot_2d=[[6, 7]],
-        pcs_to_plot_3d=None,
+        pcs_to_plot_2d=[[1, 2], [1, 3], [2, 3]],
+        pcs_to_plot_3d=[1, 2, 3],
         range_frames=(50, 200),
         k_neighbors=1000,
         cluster_start=0,
@@ -307,4 +309,4 @@ if __name__ == "__main__":
     )
     time_function(pca_visualizer.run_clustering)
     time_function(pca_visualizer.generate_plots)
-    time_function(pca_visualizer.generate_animation)
+    # time_function(pca_visualizer.generate_animation)
