@@ -1,3 +1,5 @@
 rename.py
 SPEACH_AF/
 colabfold/
+__pycache__/
+*.pyc
