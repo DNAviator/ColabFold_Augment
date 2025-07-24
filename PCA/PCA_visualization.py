@@ -433,28 +433,43 @@ class PCAVisualizer:
         t = centroid_Q - R @ centroid_P
         return R, t
 
-    def _build_full_atom_frames(self, target_core_coords: np.ndarray) -> List[Structure.Structure]:
+    def _build_full_atom_frames(
+        self, target_core_coords: np.ndarray
+    ) -> List[Structure.Structure]:
         """Builds a list of full-atom Structure objects for the animation."""
         assert self.ref_structure is not None
-        
+
         ref_chain = next(self.ref_structure.get_models()).get_list()[0]
-        full_sequence_residues = [res for res in ref_chain.get_residues() if Polypeptide.is_aa(res)]
-        
+        full_sequence_residues = [
+            res for res in ref_chain.get_residues() if Polypeptide.is_aa(res)
+        ]
+
         # Get the correct map from aligned index -> original index
-        ref_sequence_str = "".join([Polypeptide.three_to_one(res.get_resname()) for res in full_sequence_residues])
-        residue_map = self.processing_metadata['residue_maps'].get(ref_sequence_str)
+        ref_sequence_str = "".join(
+            [
+                Polypeptide.three_to_one(res.get_resname())
+                for res in full_sequence_residues
+            ]
+        )
+        residue_map = self.processing_metadata["residue_maps"].get(ref_sequence_str)
         if not residue_map:
-            logger.error(f"Could not find sequence for reference structure {self.ref_structure.id} in residue maps.")
+            logger.error(
+                f"Could not find sequence for reference structure {self.ref_structure.id} in residue maps."
+            )
             return []
         aligned_to_orig_map = {v: int(k) for k, v in residue_map.items()}
 
         # Get the list of core residues from the reference structure in the correct order
-        core_indices = sorted(list(self.processing_metadata['core_filter_indices']))
+        core_indices = sorted(list(self.processing_metadata["core_filter_indices"]))
         core_residues_in_ref = []
         for aligned_idx in core_indices:
             original_residue_idx = aligned_to_orig_map.get(aligned_idx)
-            if original_residue_idx is not None and original_residue_idx < len(full_sequence_residues):
-                core_residues_in_ref.append(full_sequence_residues[original_residue_idx])
+            if original_residue_idx is not None and original_residue_idx < len(
+                full_sequence_residues
+            ):
+                core_residues_in_ref.append(
+                    full_sequence_residues[original_residue_idx]
+                )
 
         # Determine which atoms to use based on the original PCA run
         atom_list = ["CA"] if self.atom_selection == "ca" else ["N", "CA", "C", "O"]
@@ -466,7 +481,9 @@ class PCAVisualizer:
                 if atom_name in res:
                     original_core_coords_list.append(res[atom_name].get_coord())
                 else:
-                    logger.error(f"Core atom {atom_name} missing from residue {res.get_id()} in reference PDB. Cannot build animation.")
+                    logger.error(
+                        f"Core atom {atom_name} missing from residue {res.get_id()} in reference PDB. Cannot build animation."
+                    )
                     return []
         original_core_coords = np.array(original_core_coords_list)
 
@@ -489,14 +506,16 @@ class PCAVisualizer:
                 )
                 return []
 
-            R_global, t_global = self._kabsch_transform(original_core_coords, target_core_for_frame)
+            R_global, t_global = self._kabsch_transform(
+                original_core_coords, target_core_for_frame
+            )
 
             for res in full_sequence_residues:
                 new_res = res.copy()
                 for atom in new_res.get_atoms():
                     atom.transform(R_global, t_global)
                 new_chain.add(new_res)
-            
+
             animation_frames.append(new_frame)
         return animation_frames
 

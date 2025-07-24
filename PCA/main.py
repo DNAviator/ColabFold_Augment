@@ -5,6 +5,7 @@ Main script to simplify setup for multiple runs
 import timeit
 from multi_gene_PCA import PCACalculator, RunParams, AlignmentParams
 from PCA_visualization import PCAVisualizer, ClusteringParams, VisualizationParams
+from movement_analyzer import MovementAnalyzer, AnalysisParams
 
 
 def time_function(func, *args, **kwargs):
@@ -210,88 +211,12 @@ if __name__ == "__main__":
         cluster_end=1,
     )
 
-    # Loop Residues from common core
-    # LOOP_RESIDUES = [
-    #     5,
-    #     23,
-    #     24,
-    #     25,
-    #     26,
-    #     38,
-    #     54,
-    #     80,
-    #     81,
-    #     82,
-    #     83,
-    #     91,
-    #     92,
-    #     93,
-    #     94,
-    #     95,
-    #     96,
-    #     97,
-    #     98,
-    #     99,
-    #     100,
-    #     101,
-    #     102,
-    #     103,
-    #     104,
-    #     105,
-    #     106,
-    #     107,
-    #     108,
-    #     109,
-    #     110,
-    #     111,
-    #     112,
-    #     113,
-    #     114,
-    #     115,
-    #     116,
-    #     117,
-    #     139,
-    #     140,
-    #     141,
-    #     144,
-    #     145,
-    #     146,
-    #     149,
-    #     174,
-    #     175,
-    #     176,
-    #     177,
-    #     198,
-    #     204,
-    #     205,
-    #     231,
-    #     232,
-    #     233,
-    #     234,
-    #     245,
-    #     246,
-    #     247,
-    #     251,
-    #     252,
-    #     256,
-    #     277,
-    #     285,
-    #     286,
-    #     291,
-    #     312,
-    #     313,
-    #     314,
-    #     315,
-    #     316,
-    #     317,
-    #     318,
-    #     351,
-    #     352,
-    #     353,
-    #     354,
-    #     355,
-    # ]
-
+    ANALYSIS_PARAMS = AnalysisParams(
+        pcs_for_raw_report=[1, 2, 3],
+        pcs_for_summary_report=[1, 2, 3],
+        movement_threshold=0.001,
+    )
+    
     # PCA Calculator
 
     # # Initialize the MultiGenePCA class
@@ -302,11 +227,15 @@ if __name__ == "__main__":
     # time_function(pca.run)
 
     # PCA Visualizer
-    pca_visualizer = PCAVisualizer(
-        run_params=RUN_PARAMS,
-        clustering_params=CLUSTERING_PARAMS,
-        viz_params=VISUALIZATION_PARAMS,
-    )
-    time_function(pca_visualizer.run_clustering)
+    # pca_visualizer = PCAVisualizer(
+    #     run_params=RUN_PARAMS,
+    #     clustering_params=CLUSTERING_PARAMS,
+    #     viz_params=VISUALIZATION_PARAMS,
+    # )
+    # time_function(pca_visualizer.run_clustering)
     # time_function(pca_visualizer.generate_plots)
-    time_function(pca_visualizer.generate_animation)
+    # time_function(pca_visualizer.generate_animation)
+
+    # Movement Analyzer
+    movement_analyzer = MovementAnalyzer(RUN_PARAMS, ANALYSIS_PARAMS)
+    time_function(movement_analyzer.analyze)
