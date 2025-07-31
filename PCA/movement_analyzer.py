@@ -196,11 +196,13 @@ class MovementAnalyzer:
             total_distances = pair_data['total_distances']
             sorted_indices = np.argsort(total_distances)[::-1]
             count = 0
+            listed_residues = []
             for i in sorted_indices:
-                if self.canonical_atom_map[i]['atom_name'] is not "CA":
+                if self.canonical_atom_map[i]["msa_index"] in listed_residues:
                     continue
                 if total_distances[i] >= self.analysis_params.movement_threshold and count < 10:
                     raw_logger.info(f"  {count+1}. {self._format_movement_line(i, total_distances[i])}")
+                    listed_residues.append(self.canonical_atom_map[i]["msa_index"])
                     count += 1
             raw_logger.info("")
 
@@ -209,11 +211,13 @@ class MovementAnalyzer:
                 pc_distances = pair_data['pc_distances'][pc_num]
                 sorted_indices = np.argsort(pc_distances)[::-1]
                 count = 0
+                listed_residues = []
                 for i in sorted_indices:
-                    if self.canonical_atom_map[i]['atom_name'] is not "CA":
+                    if self.canonical_atom_map[i]["msa_index"] in listed_residues:
                         continue
                     if pc_distances[i] >= self.analysis_params.movement_threshold and count < 10:
                         raw_logger.info(f"  {count+1}. {self._format_movement_line(i, pc_distances[i])}")
+                        listed_residues.append(self.canonical_atom_map[i]["msa_index"])
                         count += 1
                 raw_logger.info("")
             raw_logger.info("\n" + "="*60 + "\n")
@@ -221,7 +225,7 @@ class MovementAnalyzer:
     def _write_summary_log(self, all_movements: Dict, cluster_ids: List[int], centroid_pdb_names: Dict[int, str]):
         """Writes the high-level summary log file."""
         summary_logger = self._setup_logging("movement_analysis_summary.log")
-        
+
         summary_logger.info("Cluster Centroids:\n")
         for i, centroid in centroid_pdb_names.items():
             summary_logger.info(f"Cluster {i}: {centroid}")
@@ -251,11 +255,13 @@ class MovementAnalyzer:
                 pc_distances = pair_data['pc_distances'][pc_num]
                 sorted_indices = np.argsort(pc_distances)[::-1]
                 count = 0
+                listed_residues = []
                 for i in sorted_indices:
-                    if self.canonical_atom_map[i]['atom_name'] is not "CA":
+                    if self.canonical_atom_map[i]["msa_index"] in listed_residues:
                         continue
                     if pc_distances[i] >= self.analysis_params.movement_threshold and count < 5:
                         summary_logger.info(f"    {count+1}. {self._format_movement_line(i, pc_distances[i])}")
+                        listed_residues.append(self.canonical_atom_map[i]["msa_index"])
                         count += 1
                 summary_logger.info("")
             summary_logger.info("\n" + "="*60 + "\n")
