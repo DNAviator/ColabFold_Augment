@@ -197,6 +197,8 @@ class MovementAnalyzer:
             sorted_indices = np.argsort(total_distances)[::-1]
             count = 0
             for i in sorted_indices:
+                if self.canonical_atom_map[i]['atom_name'] is not "CA":
+                    continue
                 if total_distances[i] >= self.analysis_params.movement_threshold and count < 10:
                     raw_logger.info(f"  {count+1}. {self._format_movement_line(i, total_distances[i])}")
                     count += 1
@@ -208,6 +210,8 @@ class MovementAnalyzer:
                 sorted_indices = np.argsort(pc_distances)[::-1]
                 count = 0
                 for i in sorted_indices:
+                    if self.canonical_atom_map[i]['atom_name'] is not "CA":
+                        continue
                     if pc_distances[i] >= self.analysis_params.movement_threshold and count < 10:
                         raw_logger.info(f"  {count+1}. {self._format_movement_line(i, pc_distances[i])}")
                         count += 1
@@ -248,6 +252,8 @@ class MovementAnalyzer:
                 sorted_indices = np.argsort(pc_distances)[::-1]
                 count = 0
                 for i in sorted_indices:
+                    if self.canonical_atom_map[i]['atom_name'] is not "CA":
+                        continue
                     if pc_distances[i] >= self.analysis_params.movement_threshold and count < 5:
                         summary_logger.info(f"    {count+1}. {self._format_movement_line(i, pc_distances[i])}")
                         count += 1
