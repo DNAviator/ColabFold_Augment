@@ -1,0 +1,156 @@
+CLUSTAL O(1.2.4) multiple sequence alignment
+
+
+Jaculus_jaculus                                          ----MEEGMNALHDFGIQSTRYLQVNYRDSQDWFILVSQVADLRNAFFVLFPIWFHIQET	56
+Mus_Musculus                                             ----MEEGMNILHDFGIQSTRYLQVNYQDSQDWFILVSVIADLRNAFYVLFPIWFHLKET	56
+Rat                                                      ----MEERMNVLHDFGIQSTRYLQVNYEDSQDWFVLVSVIADLRNAFYVLFPIWFHIQET	56
+African_Elephant                                         ----MGDSMNVLHDFGIQSTHYLQVNYQNSQDWFILVTMIADLRNAFFVLFPIWFHLREA	56
+Human                                                    ----MEEGMNVLHDFGIQSTHYLQVNYQDSQDWFILVSVIADLRNAFYVLFPIWFHLQEA	56
+Human_Chimeric_Mus_Musculus_287-291                      ----MEEGMNVLHDFGIQSTHYLQVNYQDSQDWFILVSVIADLRNAFYVLFPIWFHLQEA	56
+Human_Chimeric_Mus_Musculus_287-291_344-357              ----MEEGMNVLHDFGIQSTHYLQVNYQDSQDWFILVSVIADLRNAFYVLFPIWFHLQEA	56
+Human_Chimeric_Mus_Musculus_344-357                      ----MEEGMNVLHDFGIQSTHYLQVNYQDSQDWFILVSVIADLRNAFYVLFPIWFHLQEA	56
+Human_Chimeric_Mus_Musculus_136-147_287-291              ----MEEGMNVLHDFGIQSTHYLQVNYQDSQDWFILVSVIADLRNAFYVLFPIWFHLQEA	56
+Human_Chimeric_Mus_Musculus_136-147                      ----MEEGMNVLHDFGIQSTHYLQVNYQDSQDWFILVSVIADLRNAFYVLFPIWFHLQEA	56
+Human_Chimeric_Mus_Musculus_136-147_287-291_344-357      ----MEEGMNVLHDFGIQSTHYLQVNYQDSQDWFILVSVIADLRNAFYVLFPIWFHLQEA	56
+Human_Chimeric_Mus_Musculus_136-147_344-357              ----MEEGMNVLHDFGIQSTHYLQVNYQDSQDWFILVSVIADLRNAFYVLFPIWFHLQEA	56
+Camelus_ferus                                            ----MEEGMNALHDFGIQSTRYLQVNYQDSQDWFILVSVIADLRNAFYVLFPIWFHLREA	56
+Bos_mutus                                                ----MEKGMNVLHDFGIQSTHYLQVNYQNSQDWFILVSVIADLRNAFYVLFPIWFHLREA	56
+Aptenodytes_forsteri                                     ----MEAGMNLLHDTGIQATRWLQEYFQGSQDWFLFISFAADLRNAFFVLFPIWFHFSES	56
+Chrysemys_picta_bellii                                   --------MDLLHSAGVQVVQYLQENYQGFQDWFLFISFAADLKTTFFIFFPIWFHLCKA	52
+Chinese_Turtle                                           ----MEAGMNVLHDAGIQATRYLQENYQSSQDWFLFVSFAADLRNTFFILFPIWFHLSEA	56
+Wood_frog                                                ----MENGMDALHGSGVQLIHYLQSNYMSSQDWFIFISYAADLRNTFFIFFPIWFHLCES	56
+Dryophytes_japonicus                                     MDAMMENGMDGLHHSGVQMVQYLQMNYKTSQDWFMFISFAADLRNTFFIFFPIWFHLCES	60
+Nanorana_parkeri                                         ---MMENRMDALHDSGVQMVHYLQSNYKSSQDLFMFISFAADLRNTFFIFFPIWFHLCES	57
+                                                                 *: **  *:*  ::**  :   ** *::::  ***:.:*:::******: ::
+
+Jaculus_jaculus                                          VGIRLLWVAVVGDWLNLVFKWILFGQRPYWWVLDTDYYSNTSRPLIKQFPLTCETGPGSP	116
+Mus_Musculus                                             VGINLLWVAVVGDWFNLVFKWILFGQRPYWWVLDTDYYSNSSVPIIKQFPVTCETGPGSP	116
+Rat                                                      VGINLLWVAVVGDWFNLVFKWILFGQRPYWWVLDTDYYSNSSVPLIKQFPVTCETGPGSP	116
+African_Elephant                                         VGIKLLWVAVIGDWLNLVFKWILFGQRPYWWVLDTDYYSNTSVPLIKQFPVTCETGPGSP	116
+Human                                                    VGIKLLWVAVIGDWLNLVFKWILFGQRPYWWVLDTDYYSNTSVPLIKQFPVTCETGPGSP	116
+Human_Chimeric_Mus_Musculus_287-291                      VGIKLLWVAVIGDWLNLVFKWILFGQRPYWWVLDTDYYSNTSVPLIKQFPVTCETGPGSP	116
+Human_Chimeric_Mus_Musculus_287-291_344-357              VGIKLLWVAVIGDWLNLVFKWILFGQRPYWWVLDTDYYSNTSVPLIKQFPVTCETGPGSP	116
+Human_Chimeric_Mus_Musculus_344-357                      VGIKLLWVAVIGDWLNLVFKWILFGQRPYWWVLDTDYYSNTSVPLIKQFPVTCETGPGSP	116
+Human_Chimeric_Mus_Musculus_136-147_287-291              VGIKLLWVAVIGDWLNLVFKWILFGQRPYWWVLDTDYYSNTSVPLIKQFPVTCETGPGSP	116
+Human_Chimeric_Mus_Musculus_136-147                      VGIKLLWVAVIGDWLNLVFKWILFGQRPYWWVLDTDYYSNTSVPLIKQFPVTCETGPGSP	116
+Human_Chimeric_Mus_Musculus_136-147_287-291_344-357      VGIKLLWVAVIGDWLNLVFKWILFGQRPYWWVLDTDYYSNTSVPLIKQFPVTCETGPGSP	116
+Human_Chimeric_Mus_Musculus_136-147_344-357              VGIKLLWVAVIGDWLNLVFKWILFGQRPYWWVLDTDYYSNTSVPLIKQFPVTCETGPGSP	116
+Camelus_ferus                                            VGIKLLWVAVIGDWLNLVFKWILFGQRPYWWVQDTDYYGNTSVPLIKQFPVTCETGPGSP	116
+Bos_mutus                                                VGIKLLWVAVIGDWLNLVFKWILFGQRPYWWVLDTDYYSNTSAPLIKQFPVTCETGPGSP	116
+Aptenodytes_forsteri                                     VGIRLIWVAVIGDWLNLVFKWILFGERPYWWVHETDYYSNTSAPEIQQFPLTCETGPGSP	116
+Chrysemys_picta_bellii                                   VGVKLIWVAVIGDWLNLVFKWILFGQRPYWWVHETGYYGNASTPVIQQFPLTCETGPGSP	112
+Chinese_Turtle                                           VGVKLIWVAVIGDWLNLVFKWILFGQRPYWWVHETSYYGDTSPPVIQQFPLTCETGPGSP	116
+Wood_frog                                                VGIKLIWVAVIGDWLNLVFKWILFGQRPYWWVHETGHYGNNSAPVIEQFPITCETGPGSP	116
+Dryophytes_japonicus                                     VGIKLIWVAVIGDWLNLVFKWILFGQRPYWWVHDTDYYGNTTAPAIEQFPVTCETGPGSP	120
+Nanorana_parkeri                                         VGIKLIWVAVIGDWLNLVFKWILFGQRPYWWVHETDHYGNTSAPVIEQYPVTCETGPGSP	117
+                                                         **:.*:****:***:**********:****** :*.:*.: : * *:*:*:*********
+
+Jaculus_jaculus                                          SGHAMGTAGVYYVMVTSALFIFRGKK-KPTYGFRCLRVGLWLGYGAVQLTVCLSRIYLAA	175
+Mus_Musculus                                             SGHAMGAAGVYYVMVTSTLAIFRGKK-KPTYGFRCLNVILWLGFWAVQLNVCLSRIYLAA	175
+Rat                                                      SGHAMGTAGVYYVMVTSTLAIFRGKK-KSTYGFRCLNVVLWLGYWAVQLNVCLSRIYLAA	175
+African_Elephant                                         SGHAMGTAGVYYVMVTSTLSIFQGKK-KPTYRLRCLNVILWLGFWVVQLNVCLSRIYLAA	175
+Human                                                    SGHAMGTAGVYYVMVTSTLSIFQGKI-KPTYRFRCLNVILWLGFWAVQLNVCLSRIYLAA	175
+Human_Chimeric_Mus_Musculus_287-291                      SGHAMGTAGVYYVMVTSTLSIFQGKI-KPTYRFRCLNVILWLGFWAVQLNVCLSRIYLAA	175
+Human_Chimeric_Mus_Musculus_287-291_344-357              SGHAMGTAGVYYVMVTSTLSIFQGKI-KPTYRFRCLNVILWLGFWAVQLNVCLSRIYLAA	175
+Human_Chimeric_Mus_Musculus_344-357                      SGHAMGTAGVYYVMVTSTLSIFQGKI-KPTYRFRCLNVILWLGFWAVQLNVCLSRIYLAA	175
+Human_Chimeric_Mus_Musculus_136-147_287-291              SGHAMGTAGVYYVMVTSTLAIFRGKK-KPTYGFRCLNVILWLGFWAVQLNVCLSRIYLAA	175
+Human_Chimeric_Mus_Musculus_136-147                      SGHAMGTAGVYYVMVTSTLAIFRGKK-KPTYGFRCLNVILWLGFWAVQLNVCLSRIYLAA	175
+Human_Chimeric_Mus_Musculus_136-147_287-291_344-357      SGHAMGTAGVYYVMVTSTLAIFRGKK-KPTYGFRCLNVILWLGFWAVQLNVCLSRIYLAA	175
+Human_Chimeric_Mus_Musculus_136-147_344-357              SGHAMGTAGVYYVMVTSTLAIFRGKK-KPTYGFRCLNVILWLGFWAVQLNVCLSRIYLAA	175
+Camelus_ferus                                            SGHAMGTAGVYYVMVTSTLSIFRGKK-KPTYRFRCLNVILWLGFWAVQLNVCLSRIYLAA	175
+Bos_mutus                                                SGHAMGTAGVYYVMVTSTLSIFRGKK-KPTYRFRCLNVMLWLGFWVVQLNVCLSRIYLAA	175
+Aptenodytes_forsteri                                     SGHAMGAAGVYYIMVTALLSTAMGKKQSRTLKYWVLWTVLWTGFWAVQVCVCLSRVFIAA	176
+Chrysemys_picta_bellii                                   SGHAMGSAGVYYVMVTALLPCVQGTQ-HRSCAARCLRGLLWLAFWAVQVCVCLSRVFLAA	171
+Chinese_Turtle                                           SGHAMGSAGVYYVMVTALLPCVLGTR-RGTCVARCLRGLLWLAFWAVQVCVCLSRVFLAA	175
+Wood_frog                                                SGHAMGSAEIYYVMVTAILTIMLKKR-ESSL--RCLKGVLWSGFWAVQVCVCLSRMFLAA	173
+Dryophytes_japonicus                                     SGHAMGSAGIYYVMVTAVLTIMLKKK-ESMFTSWCLRGALWSAFWAVQVCVCLSRIFLAA	179
+Nanorana_parkeri                                         SGHAMGSAGIYYVMVTSILTIMLKKR-ESSLKSWCLRGVLWSGFWAIQICVCLSRIFLAA	176
+                                                         ******:* :**:***: *     .          *   ** .: .:*: *****:::**
+
+Jaculus_jaculus                                          HFPHQVVAGVLSGIAVAETFSHIQGIYHASLKKYFLITCFLLGFALGFYLLLKGLGVDLL	235
+Mus_Musculus                                             HFPHQVVAGVLSGIAVAETFSHIRGIYNASLRKYCLITIFLFGFALGFYLLLKGLGVDLL	235
+Rat                                                      HFPHQVVAGVLSGIAVAETFSHIRGIYNASLQRYCLITFFLFGFALGFYLLLKGLGVDLL	235
+African_Elephant                                         HFPHQVVAGVLSGIAVAETFHHIRSIYNASLKKYSFITFFLFSFAIGFYLLLKGLDVDLL	235
+Human                                                    HFPHQVVAGVLSGIAVAETFSHIHSIYNASLKKYFLITFFLFSFAIGFYLLLKGLGVDLL	235
+Human_Chimeric_Mus_Musculus_287-291                      HFPHQVVAGVLSGIAVAETFSHIHSIYNASLKKYFLITFFLFSFAIGFYLLLKGLGVDLL	235
+Human_Chimeric_Mus_Musculus_287-291_344-357              HFPHQVVAGVLSGIAVAETFSHIHSIYNASLKKYFLITFFLFSFAIGFYLLLKGLGVDLL	235
+Human_Chimeric_Mus_Musculus_344-357                      HFPHQVVAGVLSGIAVAETFSHIHSIYNASLKKYFLITFFLFSFAIGFYLLLKGLGVDLL	235
+Human_Chimeric_Mus_Musculus_136-147_287-291              HFPHQVVAGVLSGIAVAETFSHIHSIYNASLKKYFLITFFLFSFAIGFYLLLKGLGVDLL	235
+Human_Chimeric_Mus_Musculus_136-147                      HFPHQVVAGVLSGIAVAETFSHIHSIYNASLKKYFLITFFLFSFAIGFYLLLKGLGVDLL	235
+Human_Chimeric_Mus_Musculus_136-147_287-291_344-357      HFPHQVVAGVLSGIAVAETFSHIHSIYNASLKKYFLITFFLFSFAIGFYLLLKGLGVDLL	235
+Human_Chimeric_Mus_Musculus_136-147_344-357              HFPHQVVAGVLSGIAVAETFSHIHSIYNASLKKYFLITFFLFSFAIGFYLLLKGLGVDLL	235
+Camelus_ferus                                            HFPHQVVAGVLSGIAVAETFRHIQSIYNASLKKYFLITFFLFSFAIGFYLLLKGLGVDLL	235
+Bos_mutus                                                HFPHQVVAGVLSGIAVAETFRHIQSIYNASLKKYFLITCFLFSFAIGFYLLLKWLGVDLL	235
+Aptenodytes_forsteri                                     HFPHQVIAGVISGMAVAKTFQHVRCIYHASLCRYLGVTFFLFSFALGFYLLLLALGVDLL	236
+Chrysemys_picta_bellii                                   HFPHQVIAGVISGMVVAEAFDHIHSIYNASLRRYLGTTLFLFSFALGFYLLLKALGVDLL	231
+Chinese_Turtle                                           HFPHQVIAGVISGMVVAEAFEHIHAIYNASLRRYLGTTLFLFGFALGFYLLLKALGVDLL	235
+Wood_frog                                                HFPHQVVTGVISGIIVAEAFQHTQSIYKVSLKKYILTTLFMTSFAVGLYLVLKATGVDLL	233
+Dryophytes_japonicus                                     HFPHQVVAGVISGMVVAEAFHHTQSIYKASLKRYILTTLFLFSFALGFYLILKAVGVDLL	239
+Nanorana_parkeri                                         HFPHQVVAGVVSGIVVAEAFHHTQSIYKASLKKYILTTLFLVSFALGLYLILKATGVDLL	236
+                                                         ******::**:**: **::* * : **:.** :*   * *: .**:*:**:*   .****
+
+Jaculus_jaculus                                          WTLEKAKRWCERPEWVHIDTTPFASLFKNLGTLLGLGLAVNSSMYRDSCKGRLGKWLPFR	295
+Mus_Musculus                                             WTLEKAKRWCERPEWVHLDTTPFASLFKNLGTLLGLGLALNSSMYRKSCKGELSKLLPFR	295
+Rat                                                      WTLEKAKRWCERPEWVHLDTTPFASLFKNLGTLLGLGLALNSSMYRKSCKGELRKSLPFR	295
+African_Elephant                                         WTLEKAKRWCERPEWVLIDSTPFASLFRNLGTLFGLGLALNSSMYRESCKGKLRMWLPFR	295
+Human                                                    WTLEKAQRWCEQPEWVHIDTTPFASLLKNLGTLFGLGLALNSSMYRESCKGKLSKWLPFR	295
+Human_Chimeric_Mus_Musculus_287-291                      WTLEKAQRWCEQPEWVHIDTTPFASLLKNLGTLFGLGLALNSSMYRESCKGELSKLLPFR	295
+Human_Chimeric_Mus_Musculus_287-291_344-357              WTLEKAQRWCEQPEWVHIDTTPFASLLKNLGTLFGLGLALNSSMYRESCKGELSKLLPFR	295
+Human_Chimeric_Mus_Musculus_344-357                      WTLEKAQRWCEQPEWVHIDTTPFASLLKNLGTLFGLGLALNSSMYRESCKGKLSKWLPFR	295
+Human_Chimeric_Mus_Musculus_136-147_287-291              WTLEKAQRWCEQPEWVHIDTTPFASLLKNLGTLFGLGLALNSSMYRESCKGELSKLLPFR	295
+Human_Chimeric_Mus_Musculus_136-147                      WTLEKAQRWCEQPEWVHIDTTPFASLLKNLGTLFGLGLALNSSMYRESCKGKLSKWLPFR	295
+Human_Chimeric_Mus_Musculus_136-147_287-291_344-357      WTLEKAQRWCEQPEWVHIDTTPFASLLKNLGTLFGLGLALNSSMYRESCKGELSKLLPFR	295
+Human_Chimeric_Mus_Musculus_136-147_344-357              WTLEKAQRWCEQPEWVHIDTTPFASLLKNLGTLFGLGLALNSSMYRESCKGKLSKWLPFR	295
+Camelus_ferus                                            WTLEKAKRWCERPEWVHIDTTPFASLLKNLGTLFGLGLALNSSMYRESCKGKLSKWFPFR	295
+Bos_mutus                                                WTLEKAKRRCERPEWVHIDTTPFASLLKNLGTLFGLGLALNSSMYRESCKGKLSKWFPFR	295
+Aptenodytes_forsteri                                     WTLERARRWCAHPEWVHIDTTPFASLLRNLGILFGLGLALNSHMYTESCRGKQSRQLPFR	296
+Chrysemys_picta_bellii                                   WTMEKAKRWCDRPEWVHIETTPFAGLLRNLGILFGLGLALNSQMYLESCKGKMGQQLPFR	291
+Chinese_Turtle                                           WTLEKAERWCDRPEWIHIETTPFAGLLRNLGILFGLGLALNSQMYLESCKGKRGQRLPFR	295
+Wood_frog                                                WTMEKAKKWCARPEWVNIDTSPFASLFRNMGIFFGLGLALSSKLYQESCHGKQGSEFTFR	293
+Dryophytes_japonicus                                     WTLEKAKKWCQRPEWIHIDTTPFAGLLRNLGIFFGLGLALNSKLYQESCRGKQGRQVPFR	299
+Nanorana_parkeri                                         WTMEKAKRWCARPEWIHIDTTPFAGLFRNLGIFFGLGLALSSKLYHESCRGKRGSEFTFR	296
+                                                         **:*:*.: * :***: ::::***.*::*:* ::*****:.* :* .**:*.    . **
+
+Jaculus_jaculus                                          LCSIVASLVFLHLFDSLKPPSQRELIFYALSFCKSAAVPFASASLIPYCLAQVLGQTHKK	355
+Mus_Musculus                                             FACIVASLVLLHLFDSLKPPSQVELIFYILSFCKSATVPFASVSLIPYCLARILGQTHKK	355
+Rat                                                      LACIVASLGLLHLFDSLKPPSQIESIFYILSFCKSATVPFASVSLIPYCLARLLGQTHKK	355
+African_Elephant                                         LSCILASLIFLHLFDSLKPPSQIELLFYVLSFCKSAAVPLASASLIPYCLMWVLGQPDKK	355
+Human                                                    LSSIVASLVLLHVFDSLKPPSQVELVFYVLSFCKSAVVPLASVSVIPYCLAQVLGQPHKK	355
+Human_Chimeric_Mus_Musculus_287-291                      LSSIVASLVLLHVFDSLKPPSQVELVFYVLSFCKSAVVPLASVSVIPYCLAQVLGQPHKK	355
+Human_Chimeric_Mus_Musculus_287-291_344-357              LSSIVASLVLLHVFDSLKPPSQVELVFYVLSFCKSAVVPLASVSVIPYCLARILGQTHKK	355
+Human_Chimeric_Mus_Musculus_344-357                      LSSIVASLVLLHVFDSLKPPSQVELVFYVLSFCKSAVVPLASVSVIPYCLARILGQTHKK	355
+Human_Chimeric_Mus_Musculus_136-147_287-291              LSSIVASLVLLHVFDSLKPPSQVELVFYVLSFCKSAVVPLASVSVIPYCLAQVLGQPHKK	355
+Human_Chimeric_Mus_Musculus_136-147                      LSSIVASLVLLHVFDSLKPPSQVELVFYVLSFCKSAVVPLASVSVIPYCLAQVLGQPHKK	355
+Human_Chimeric_Mus_Musculus_136-147_287-291_344-357      LSSIVASLVLLHVFDSLKPPSQVELVFYVLSFCKSAVVPLASVSVIPYCLARILGQTHKK	355
+Human_Chimeric_Mus_Musculus_136-147_344-357              LSSIVASLVLLHVFDSLKPPSQVELVFYVLSFCKSAVVPLASVSVIPYCLARILGQTHKK	355
+Camelus_ferus                                            LGCIVASLILLHLFDSLKPPSQTELIFYILSFCKSAAVPLASVSLIPYCLAWVLGQPNKK	355
+Bos_mutus                                                LSCIVASLVLLHLFDSLKPPSQIELIFYVLSFCKSAAVPLASVSLIPYCLAWVLGQPNKK	355
+Aptenodytes_forsteri                                     LGCITASLLVLHLFDAFKPPSHMQLLFYVLSFCKSAAVPLATVGLIPYCVSQLLATQDKK	356
+Chrysemys_picta_bellii                                   LSCIAASLLVLHLFDSFDLPTDRELLFYVLSFCKSAAAHLCAVALIPYCIAQVLRRGDKK	351
+Chinese_Turtle                                           LSCIAASLLVLHLFDSFDLPTDRELLFYLLSFCKNAAAHLCAVALIPYCVAQVLRRGHEK	355
+Wood_frog                                                MCCIVASLIVLHIFDSFKPPTKVETLFYALLFCKSAAVPLAAVGIIPYCVSQLLNQQSKK	353
+Dryophytes_japonicus                                     MCCIVASLFVLHLFDSFKPPTKVEMLFYALSFCKSAAVPLAAVGIIPYCVSQLLHQQSKK	359
+Nanorana_parkeri                                         MCCIAASLIVLHLFDSFKPPTKVEMLFYILSFCKSTAVPLAAVGIIPYCVSQLLHQQSKK	356
+                                                         : .* *** .**:**::. *:. : :** * ***.:.. :.:..:****:  :*    :*
+
+Jaculus_jaculus                                          SL	357
+Mus_Musculus                                             SL	357
+Rat                                                      SL	357
+African_Elephant                                         SL	357
+Human                                                    SL	357
+Human_Chimeric_Mus_Musculus_287-291                      SL	357
+Human_Chimeric_Mus_Musculus_287-291_344-357              SL	357
+Human_Chimeric_Mus_Musculus_344-357                      SL	357
+Human_Chimeric_Mus_Musculus_136-147_287-291              SL	357
+Human_Chimeric_Mus_Musculus_136-147                      SL	357
+Human_Chimeric_Mus_Musculus_136-147_287-291_344-357      SL	357
+Human_Chimeric_Mus_Musculus_136-147_344-357              SL	357
+Camelus_ferus                                            TL	357
+Bos_mutus                                                TL	357
+Aptenodytes_forsteri                                     --	356
+Chrysemys_picta_bellii                                   IL	353
+Chinese_Turtle                                           MR	357
+Wood_frog                                                NL	355
+Dryophytes_japonicus                                     IL	361
+Nanorana_parkeri                                         NL	358
+                                                           

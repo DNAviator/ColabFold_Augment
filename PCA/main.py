@@ -29,25 +29,34 @@ if __name__ == "__main__":
             for _ in [
                 # "Penguin",
                 "Penguin_w_dropout",
-                "Bos_mutus_w_dropout",
-                "Camelus_ferus_w_dropout",
+                # "Bos_mutus_w_dropout",
+                # "Camelus_ferus_w_dropout",
                 "Chrysemys_picta_bellii_w_dropout",
                 "Dryophytes_japonicus_w_dropout",
                 "Jaculus_jaculus_w_dropout",
                 "Nanorana_parkeri_w_dropout",
                 # "All_Wood_Frog",
                 "Wood_Frog_w_dropout_all",
-                "Human_w_dropout",
+                # "Human_w_dropout",
                 "Mus_Musculus_w_dropout",
+                # "African_Elephant_w_dropout",
+                "Chinese_Turtle_w_dropout",
+                "Rattus_Norvegicus_w_dropout",
+                "Human_Chimeric_Mus_Musculus_136-147_287-291_344-357_w_dropout",
+                # "Human_Chimeric_Mus_Musculus_136-147_287-291_w_dropout",
+                "Human_Chimeric_Mus_Musculus_136-147_344-357_w_dropout",
+                # "Human_Chimeric_Mus_Musculus_136-147_w_dropout",
+                "Human_Chimeric_Mus_Musculus_287-291_344-357_w_dropout",
+                # "Human_Chimeric_Mus_Musculus_287-291_w_dropout",
             ]
         ],
-        msa_path="C:\\Users\\cramerj\\Code\\ColabFold_Augmentation\\ColabFold_Augment\\PCA\\Full_Align_Added_Human_Mouse.clustal_num",
+        msa_path="C:\\Users\\cramerj\\Code\\ColabFold_Augmentation\\ColabFold_Augment\\PCA\\Alignments\\20_align_w_chimeric_Jul_31.clustal_num",
         output_dir="C:\\Users\\cramerj\\Code\\ColabFold_Augmentation\\ColabFold_Augment\\PCA\\PCA_output",
-        run_name="All_Dropout_Jul_24_01",
+        run_name="No_Proline_Cluster_Dropout_BB_Jul_31_01",
     )
 
     ALIGNMENT_PARAMS = AlignmentParams(
-        atom_selection="CA",
+        atom_selection="backbone",
         num_iterations=3,
         residues_to_exclude=[
             1,
@@ -205,36 +214,36 @@ if __name__ == "__main__":
     VISUALIZATION_PARAMS = VisualizationParams(
         pcs_to_plot_2d=[[1, 2], [1, 3], [2, 3]],
         pcs_to_plot_3d=[1, 2, 3],
-        range_frames=(50, 200),
-        k_neighbors=1000,
+        num_frames=100,
         cluster_start=0,
-        cluster_end=1,
+        cluster_end=5,
     )
 
     ANALYSIS_PARAMS = AnalysisParams(
-        pcs_for_raw_report=[1, 2, 3],
-        pcs_for_summary_report=[1, 2, 3],
-        movement_threshold=0.001,
+        pcs_for_raw_report=[1,],
+        pcs_for_summary_report=[1,],
+        movement_threshold=0.05,
     )
-    
+
     # PCA Calculator
 
-    # # Initialize the MultiGenePCA class
-    # pca = PCACalculator(
-    #     run_params=RUN_PARAMS,
-    #     alignment_params=ALIGNMENT_PARAMS,
-    # )
-    # time_function(pca.run)
+    # Initialize the MultiGenePCA class
+    pca = PCACalculator(
+        run_params=RUN_PARAMS,
+        alignment_params=ALIGNMENT_PARAMS,
+    )
+    time_function(pca.run)
 
     # PCA Visualizer
-    # pca_visualizer = PCAVisualizer(
-    #     run_params=RUN_PARAMS,
-    #     clustering_params=CLUSTERING_PARAMS,
-    #     viz_params=VISUALIZATION_PARAMS,
-    # )
-    # time_function(pca_visualizer.run_clustering)
-    # time_function(pca_visualizer.generate_plots)
+    pca_visualizer = PCAVisualizer(
+        run_params=RUN_PARAMS,
+        clustering_params=CLUSTERING_PARAMS,
+        viz_params=VISUALIZATION_PARAMS,
+    )
+    time_function(pca_visualizer.run_clustering)
+    time_function(pca_visualizer.generate_plots)
     # time_function(pca_visualizer.generate_animation)
+    # time_function(pca_visualizer.generate_putty_models)
 
     # Movement Analyzer
     movement_analyzer = MovementAnalyzer(RUN_PARAMS, ANALYSIS_PARAMS)

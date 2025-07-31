@@ -66,7 +66,7 @@ class MovementAnalyzer:
         file_logger.addHandler(fh)
 
         return file_logger
-    
+
     def _load_data(self):
         """Loads all necessary data from the PCA calculation step."""
         logger.info("Loading data from PCA run...")
@@ -79,14 +79,14 @@ class MovementAnalyzer:
             self.projections_df = pd.read_csv(clustered_csv_path)
 
             self.eigenvectors = np.loadtxt(self.raw_data_path / "pca_components.csv", delimiter=",")
-            
+
             with open(self.raw_data_path / "processing_metadata.json", "r") as f:
                 self.processing_metadata = json.load(f)
-            
+
             with open(self.run_path / "run_parameters.json", "r") as f:
                 run_params_data = json.load(f)
                 self.atom_selection = run_params_data.get("alignment_params", {}).get("atom_selection", "ca")
-            
+
             logger.info("Data loaded successfully.")
             return True
         except FileNotFoundError as e:
@@ -106,7 +106,7 @@ class MovementAnalyzer:
         atom_list = ["CA"] if self.atom_selection == "ca" else ["N", "CA", "C", "O"]
         # Ensure core_filter_indices is a list of integers
         core_indices = sorted([int(i) for i in self.processing_metadata['core_filter_indices']])
-        
+
         for msa_idx in core_indices:
             for atom_name in atom_list:
                 self.canonical_atom_map.append({'msa_index': msa_idx, 'atom_name': atom_name})
@@ -116,23 +116,23 @@ class MovementAnalyzer:
         """Main method to run the entire movement analysis workflow."""
         if not self._load_data():
             return
-        
+
         self._create_canonical_atom_map()
 
         # 1. Get coordinates and PDB names for each cluster centroid
         logger.info("Reconstructing coordinates for all cluster centroids...")
         cluster_ids = sorted([c for c in self.projections_df['cluster'].unique() if c != -1])
         pc_cols = [f"PC{i+1}" for i in range(self.eigenvectors.shape[0])]
-        
+
         centroid_coords = {}
         centroid_pdb_names = {}
         for cid in cluster_ids:
             cluster_df = self.projections_df[self.projections_df['cluster'] == cid]
-            
+
             # Find the projection vector for the point closest to the geometric center
             cluster_projections = cluster_df[pc_cols].values
             centroid_proj_vector = cluster_projections.mean(axis=0)
-            
+
             # Find the index of the actual data point closest to this geometric center
             closest_point_index_in_cluster = cdist([centroid_proj_vector], cluster_projections).argmin()
 
@@ -152,13 +152,13 @@ class MovementAnalyzer:
         for c1, c2 in combinations(cluster_ids, 2):
             coords1 = centroid_coords[c1]
             coords2 = centroid_coords[c2]
-            
+
             total_movement_vectors = coords2 - coords1
             total_distances = np.linalg.norm(total_movement_vectors, axis=1)
-            
+
             pc_movements = {}
             total_movement_flat = total_movement_vectors.flatten()
-            
+
             all_pcs_to_analyze = set(self.analysis_params.pcs_for_raw_report + self.analysis_params.pcs_for_summary_report)
             for pc_num in all_pcs_to_analyze:
                 pc_idx = pc_num - 1
@@ -187,9 +187,9 @@ class MovementAnalyzer:
     def _write_raw_log(self, all_movements: Dict, cluster_ids: List[int]):
         """Writes the detailed raw data log file."""
         raw_logger = self._setup_logging("movement_analysis_raw.log")
-        
+
         for c1, c2 in combinations(cluster_ids, 2):
-            raw_logger.info(f"--- Movements between Cluster {c1} and Cluster {c2} ---\n")
+            raw_logger.info(f"--- C{c1} vs C{c2} ---\n")
             pair_data = all_movements[(c1, c2)]
 
             raw_logger.info("Top 10 Total Movements:")
@@ -218,6 +218,10 @@ class MovementAnalyzer:
         """Writes the high-level summary log file."""
         summary_logger = self._setup_logging("movement_analysis_summary.log")
         
+        summary_logger.info("Cluster Centroids:\n")
+        for i, centroid in centroid_pdb_names.items():
+            summary_logger.info(f"Cluster {i}: {centroid}")
+
         best_partners = {}
         for c1 in cluster_ids:
             max_dist = -1
@@ -234,11 +238,8 @@ class MovementAnalyzer:
         for c1 in sorted(best_partners.keys()):
             c2 = best_partners[c1]
             pair = tuple(sorted((c1, c2)))
-            
-            c1_name = centroid_pdb_names[c1]
-            c2_name = centroid_pdb_names[c2]
-            
-            summary_logger.info(f"Cluster {c1} (Centroid: {c1_name}) had the greatest difference with Cluster {c2} (Centroid: {c2_name}):\n")
+
+            summary_logger.info(f"Cluster {c1} had the greatest difference with Cluster {c2}:\n")
             pair_data = all_movements[pair]
 
             for pc_num in self.analysis_params.pcs_for_summary_report:

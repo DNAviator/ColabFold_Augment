@@ -40,7 +40,8 @@ class AlignmentParams:
     def __post_init__(self):
         self.atom_selection = self.atom_selection.lower()
         if self.atom_selection not in ["ca", "backbone"]:
-            raise ValueError("atom_selection must be 'ca' or 'backbone'.")
+            logger.warning("Atom selection must be 'ca' or 'backbone' — defaulting to 'backbone'.")
+            self.atom_selection = "backbone"
 
 
 # --- Worker Functions for Multiprocessing ---
@@ -240,8 +241,8 @@ class PCACalculator:
 
         pdb_data = {
             name: {"all_coords": all_c, "filtered_coords": filt_c}
-            for name, all_c, filt_c in extraction_results
-            if name is not None
+            for result in extraction_results if result is not None
+            for name, all_c, filt_c in [result] if name is not None
         }
 
         if not pdb_data:
